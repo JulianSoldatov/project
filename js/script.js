@@ -1,9 +1,26 @@
 "use strict";
 
-const answers = [];
+const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "2"); ;
 
-answers[0] = prompt('Как ваше имя?', '');
-answers[1] = prompt('Как ваше фамилия?', '');
-answers[2] = prompt('Как ваше вторая фамилия?', '');
+console.log(numberOfFilms);
 
-document.write(answers)
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+
+}; 
+
+const lastWatchedFilm = prompt("Один из последних просмотренных фильмов?", "Бетмен"),
+      ratingFilm = prompt("Рейтинг фильма", "5");
+
+
+personalMovieDB.movies[lastWatchedFilm] = ratingFilm;
+
+
+console.log(personalMovieDB);
+
+
+
